@@ -1,0 +1,15 @@
+{% extends 'main.html' %}
+{% block title %} home {% endblock %}
+
+{% block content %}
+<h1>
+ This is the items that will be added
+</h1>
+<h2>
+ {% for item in items %}
+    <a href = "{% url 'myapp:detail' item.id %} ">
+     {{ item.id }}.{{ item.name }} / {{ item.description }} / {{ item.price }} <br>
+    </a>
+ {% endfor %}
+</h2>
+{% endblock %}

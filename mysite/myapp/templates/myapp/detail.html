@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block title %} detail {% endblock %}
+
+{% block content %}
+<h1>
+ This is the detail page
+</h1>
+<h2>
+ {{ item.name }} / {{ item.description }} / {{ item.price }}
+</h2>
+{% endblock %}
